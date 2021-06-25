@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { User } from '../types';
 
 const useUsers = () => {
-	const [users, setUsers] = useState<string[]>([]);
+	const [users, setUsers] = useState<User[]>([]);
 
 	return {
 		users,

@@ -13,9 +13,15 @@ const SearchForm = ({ setUsers, setMessage } : SearchFormProps) => {
 		e.preventDefault();
 
 		const fetchedUser = await getGitHubUser(searchInput);
-		
-		setUsers((prev : string[]) => prev ? [...prev, searchInput] : [searchInput]);
-		setMessage('SEARCH SUBMITTED');
+
+		if (fetchedUser === 404) {
+			setMessage('That user was not found.');
+		}
+		else {
+			setMessage('Success!');
+			setUsers((prev : string[]) => [...prev, fetchedUser]);
+		}
+
 		setSearchInput('');
 	};
 
