@@ -6,7 +6,7 @@ const useUsers = () => {
 	return {
 		users,
 		setUsers
-	}
+	};
 };
 
 export default useUsers;

@@ -1,9 +1,13 @@
 import React from 'react';
 
-const FeedbackMessage = () => {
+type FeedbackMessageProps = {
+	message : string
+};
+
+const FeedbackMessage = ({ message } : FeedbackMessageProps) => {
 	return (
 		<div>
-			Feedback message!
+			{message}
 		</div>
 	);
 };
