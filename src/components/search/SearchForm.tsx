@@ -1,24 +1,27 @@
 import React, { FormEvent, useState } from 'react';
-import { getGitHubUser } from '../../services/githubFetch';
+import { getGitHubUser } from '../../services/getGitHubUser';
+import { usersRef } from '../../services/firebaseUtils';
+import { shapeUserData } from '../../services/mungeUtils';
 
 type SearchFormProps = {
-	setUsers : Function
 	setMessage : Function
 };
 
-const SearchForm = ({ setUsers, setMessage } : SearchFormProps) => {
+const SearchForm = ({ setMessage } : SearchFormProps) => {
 	const [searchInput, setSearchInput] = useState('');
 
 	const handleSearchSubmit = async (e : FormEvent) => {
 		e.preventDefault();
 		const fetchedUser = await getGitHubUser(searchInput);
 
+		// TODO improve/clarify error handling between here and the fetch function
 		if (fetchedUser === 404) {
 			setMessage('That user was not found.');
 		}
 		else {
 			setMessage('Success!');
-			setUsers((prev : string[]) => [...prev, fetchedUser]);
+			const shapedUser = shapeUserData(fetchedUser);
+			usersRef.push(shapedUser);
 		}
 
 		setSearchInput('');
@@ -30,6 +33,7 @@ const SearchForm = ({ setUsers, setMessage } : SearchFormProps) => {
 			onSubmit={handleSearchSubmit}
 		>
 			<input
+				aria-label="search input"
 				value={searchInput}
 				onChange={e => setSearchInput(e.target.value)}
 			/>

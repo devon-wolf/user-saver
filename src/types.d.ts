@@ -1,10 +1,19 @@
 export type User = {
 	login : string, 
-	id : number, 
+	id : number,
+	url : string, 
+	name : string | null, 
+	public_repos : number, 
+	public_gists : number,
+	followers : number, 
+	following : number, 
+	created_at : string,
+};
+
+export type GHUser = User & {
 	node_id : string, 
 	avatar_url : string | null, 
 	gravatar_id : string | null, 
-	url : string, 
 	html_url : string, 
 	followers_url : string, 
 	following_url : string, 
@@ -17,7 +26,6 @@ export type User = {
 	received_events_url : string, 
 	type : string, 
 	site_admin : boolean, 
-	name : string | null, 
 	company : string | null, 
 	blog : string | null, 
 	location : string | null, 
@@ -25,10 +33,5 @@ export type User = {
 	hireable : boolean | null, 
 	bio : string | null, 
 	twitter_username : string | null, 
-	public_repos : number, 
-	public_gists : number, 
-	followers : number, 
-	following : number, 
-	created_at : string, 
 	updated_at : string
 };

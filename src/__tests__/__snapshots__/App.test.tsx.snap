@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserSaver page displays a list of users and their data 1`] = `
+<tr
+  aria-label="user row"
+>
+  <td
+    aria-label="username"
+  >
+    <a
+      aria-label="link to GitHub"
+      href="https://github.com/devon-wolf"
+    >
+      devon-wolf
+    </a>
+  </td>
+  <td
+    aria-label="name"
+  >
+    n/a
+  </td>
+  <td
+    aria-label="public repos"
+  >
+    80
+  </td>
+  <td
+    aria-label="public gists"
+  >
+    0
+  </td>
+  <td
+    aria-label="followers"
+  >
+    30
+  </td>
+  <td
+    aria-label="following"
+  >
+    45
+  </td>
+  <td
+    aria-label="created at"
+  >
+    11/25/2017
+  </td>
+</tr>
+`;
+
+exports[`UserSaver page displays a list of users and their data 2`] = `
+<tr
+  aria-label="user row"
+>
+  <td
+    aria-label="username"
+  >
+    <a
+      aria-label="link to GitHub"
+      href="https://github.com/Tylerfarris"
+    >
+      Tylerfarris
+    </a>
+  </td>
+  <td
+    aria-label="name"
+  >
+    n/a
+  </td>
+  <td
+    aria-label="public repos"
+  >
+    0
+  </td>
+  <td
+    aria-label="public gists"
+  >
+    0
+  </td>
+  <td
+    aria-label="followers"
+  >
+    0
+  </td>
+  <td
+    aria-label="following"
+  >
+    0
+  </td>
+  <td
+    aria-label="created at"
+  >
+    04/07/2020
+  </td>
+</tr>
+`;
+
+exports[`UserSaver page displays a list of users and their data 3`] = `
+<tr
+  aria-label="user row"
+>
+  <td
+    aria-label="username"
+  >
+    <a
+      aria-label="link to GitHub"
+      href="https://github.com/Vance-M"
+    >
+      Vance-M
+    </a>
+  </td>
+  <td
+    aria-label="name"
+  >
+    n/a
+  </td>
+  <td
+    aria-label="public repos"
+  >
+    55
+  </td>
+  <td
+    aria-label="public gists"
+  >
+    0
+  </td>
+  <td
+    aria-label="followers"
+  >
+    14
+  </td>
+  <td
+    aria-label="following"
+  >
+    2
+  </td>
+  <td
+    aria-label="created at"
+  >
+    11/19/2020
+  </td>
+</tr>
+`;
+
+exports[`UserSaver page displays a list of users and their data 4`] = `
+<tr
+  aria-label="user row"
+>
+  <td
+    aria-label="username"
+  >
+    <a
+      aria-label="link to GitHub"
+      href="https://github.com/ccbass"
+    >
+      ccbass
+    </a>
+  </td>
+  <td
+    aria-label="name"
+  >
+    Colin Bassett
+  </td>
+  <td
+    aria-label="public repos"
+  >
+    31
+  </td>
+  <td
+    aria-label="public gists"
+  >
+    0
+  </td>
+  <td
+    aria-label="followers"
+  >
+    9
+  </td>
+  <td
+    aria-label="following"
+  >
+    0
+  </td>
+  <td
+    aria-label="created at"
+  >
+    05/20/2020
+  </td>
+</tr>
+`;
+
+exports[`UserSaver page displays a list of users and their data 5`] = `
+<tr
+  aria-label="user row"
+>
+  <td
+    aria-label="username"
+  >
+    <a
+      aria-label="link to GitHub"
+      href="https://github.com/phrabos"
+    >
+      phrabos
+    </a>
+  </td>
+  <td
+    aria-label="name"
+  >
+    Patrick Hrabos
+  </td>
+  <td
+    aria-label="public repos"
+  >
+    92
+  </td>
+  <td
+    aria-label="public gists"
+  >
+    0
+  </td>
+  <td
+    aria-label="followers"
+  >
+    28
+  </td>
+  <td
+    aria-label="following"
+  >
+    39
+  </td>
+  <td
+    aria-label="created at"
+  >
+    10/20/2020
+  </td>
+</tr>
+`;
