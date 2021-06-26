@@ -11,7 +11,6 @@ const SearchForm = ({ setUsers, setMessage } : SearchFormProps) => {
 
 	const handleSearchSubmit = async (e : FormEvent) => {
 		e.preventDefault();
-		console.log('*****FORM SUBMITTED*****')
 		const fetchedUser = await getGitHubUser(searchInput);
 
 		if (fetchedUser === 404) {
