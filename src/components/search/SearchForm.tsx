@@ -11,7 +11,7 @@ const SearchForm = ({ setUsers, setMessage } : SearchFormProps) => {
 
 	const handleSearchSubmit = async (e : FormEvent) => {
 		e.preventDefault();
-
+		console.log('*****FORM SUBMITTED*****')
 		const fetchedUser = await getGitHubUser(searchInput);
 
 		if (fetchedUser === 404) {
@@ -26,7 +26,10 @@ const SearchForm = ({ setUsers, setMessage } : SearchFormProps) => {
 	};
 
 	return (
-		<form onSubmit={handleSearchSubmit}>
+		<form
+			aria-label="search form"
+			onSubmit={handleSearchSubmit}
+		>
 			<input
 				value={searchInput}
 				onChange={e => setSearchInput(e.target.value)}

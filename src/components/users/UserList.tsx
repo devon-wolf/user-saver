@@ -12,18 +12,23 @@ const UserList = ({ users } : UserListProps) => {
 	return (
 		<table>
 			<thead>
-				<th>Username</th>
-				<th>Name</th>
-				<th>Public Repos</th>
-				<th>Public Gists</th>
-				<th>Followers</th>
-				<th>Following</th>
-				<th>Created at</th>
+				<tr>
+					<th>Username</th>
+					<th>Name</th>
+					<th>Public Repos</th>
+					<th>Public Gists</th>
+					<th>Followers</th>
+					<th>Following</th>
+					<th>Created at</th>
+				</tr>
 			</thead>
-			{users.map(user => 
-			<tr key={user.id}>
-				<UserItem user={user} />
-			</tr>)}
+
+			<tbody>
+				{users.map(user => 
+				<tr key={user.id}>
+					<UserItem user={user} />
+				</tr>)}
+			</tbody>
 		</table>
 	);
 };
