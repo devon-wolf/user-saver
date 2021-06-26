@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from 'react';
+import { getGitHubUser } from '../../services/githubFetch';
 
 type SearchFormProps = {
 	setUsers : Function
@@ -8,16 +9,26 @@ type SearchFormProps = {
 const SearchForm = ({ setUsers, setMessage } : SearchFormProps) => {
 	const [searchInput, setSearchInput] = useState('');
 
-
-	const handleSearchSubmit = (e : FormEvent) => {
+	const handleSearchSubmit = async (e : FormEvent) => {
 		e.preventDefault();
-		setUsers((prev : string[]) => prev ? [...prev, searchInput] : [searchInput]);
-		setMessage('SEARCH SUBMITTED');
+		const fetchedUser = await getGitHubUser(searchInput);
+
+		if (fetchedUser === 404) {
+			setMessage('That user was not found.');
+		}
+		else {
+			setMessage('Success!');
+			setUsers((prev : string[]) => [...prev, fetchedUser]);
+		}
+
 		setSearchInput('');
 	};
 
 	return (
-		<form onSubmit={handleSearchSubmit}>
+		<form
+			aria-label="search form"
+			onSubmit={handleSearchSubmit}
+		>
 			<input
 				value={searchInput}
 				onChange={e => setSearchInput(e.target.value)}

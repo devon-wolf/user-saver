@@ -1,9 +1,33 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, fireEvent, cleanup } from '@testing-library/react';
+import UserSaver from './pages/UserSaver';
+import { act } from 'react-dom/test-utils';
 
-test('renders the search box', () => {
-  render(<App />);
-  const searchInput = screen.getByRole('textbox');
-  expect(searchInput).toBeInTheDocument();
+describe('UserSaver page', () => {
+  beforeEach(() => {
+    render(<UserSaver />);
+  });
+
+  it('renders the user saver page', () => {
+    screen.getByLabelText('search form');
+    screen.getByRole('textbox');
+    screen.getByRole('table');
+  });
+
+  it.skip('takes in a search term and correctly updates with results on submit', () => {
+    const searchForm = screen.getByLabelText('search form');
+    const searchInput = screen.getByRole('textbox');
+    
+    fireEvent.change(searchInput, {
+      target: { value: 'devon-wolf' } 
+    });
+
+    fireEvent.submit(searchForm);
+
+    const userTable = screen.getByRole('table');
+    
+  });
 });
+
+
+
