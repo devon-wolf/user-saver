@@ -1,12 +1,13 @@
 import React, { FormEvent, useState } from 'react';
-import { getGitHubUser } from '../../services/githubFetch';
+import { getGitHubUser } from '../../services/getGitHubUser';
+import { usersRef } from '../../services/firebaseUtils';
+import { shapeUserData } from '../../services/mungeUtils';
 
 type SearchFormProps = {
-	setUsers : Function
 	setMessage : Function
 };
 
-const SearchForm = ({ setUsers, setMessage } : SearchFormProps) => {
+const SearchForm = ({ setMessage } : SearchFormProps) => {
 	const [searchInput, setSearchInput] = useState('');
 
 	const handleSearchSubmit = async (e : FormEvent) => {
@@ -18,7 +19,8 @@ const SearchForm = ({ setUsers, setMessage } : SearchFormProps) => {
 		}
 		else {
 			setMessage('Success!');
-			setUsers((prev : string[]) => [...prev, fetchedUser]);
+			const shapedUser = shapeUserData(fetchedUser);
+			usersRef.push(shapedUser);
 		}
 
 		setSearchInput('');

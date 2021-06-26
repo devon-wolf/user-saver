@@ -1,5 +1,5 @@
 import { convertDate } from './convertDate';
-import { getGitHubUser } from './githubFetch';
+import { getGitHubUser } from './getGitHubUser';
 
 it('takes a date string as formatted by the GitHub API and reformats it to MM/DD/YYYY', () => {
 	const exampleDate = '2017-11-25T18:38:54Z';

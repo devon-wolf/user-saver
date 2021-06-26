@@ -6,12 +6,12 @@ import useUsers from '../hooks/useUsers';
 import useMessage from '../hooks/useMessage';
 
 const UserSaver = () => {
-	const { users, setUsers } = useUsers();
+	const { users } = useUsers();
 	const { message, setMessage } = useMessage();
 
 	return (
 		<div>
-			<SearchForm setUsers={setUsers} setMessage={setMessage} />
+			<SearchForm setMessage={setMessage} />
 			<FeedbackMessage message={message} />
 
 			<UserList users={users} />
