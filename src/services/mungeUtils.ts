@@ -4,7 +4,7 @@ import { convertDate } from './convertDate';
 export const shapeUserData = (user : GHUser) => {
 	return {
 		id: user.id,
-		url: user.url,
+		url: user.html_url,
 		login: user.login,
 		name: user.name,
 		public_repos: user.public_repos,
