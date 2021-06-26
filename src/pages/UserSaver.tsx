@@ -5,7 +5,7 @@ import UserList from '../components/users/UserList';
 import useUsers from '../hooks/useUsers';
 import useMessage from '../hooks/useMessage';
 
-const UserSaver = () => {
+const UserSaver = () : JSX.Element => {
 	const { users } = useUsers();
 	const { message, setMessage } = useMessage();
 

@@ -2,6 +2,7 @@ import fetch from 'node-fetch';
 
 const URL = 'https://api.github.com/users';
 
+// TODO improve error handling here
 export const getGitHubUser  = async (user : string) => {
 	const response = await fetch(`${URL}/${user}`);
 

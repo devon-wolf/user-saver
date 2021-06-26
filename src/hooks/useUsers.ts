@@ -3,7 +3,11 @@ import { User } from '../types';
 import { usersRef } from '../services/firebaseUtils';
 
 // TODO figure out if it should make a fresh GH fetch each time the display is populated, this data can get stale fast as-is; consider just storing a list of usernames and making fetches regularly?
-const useUsers = () => {
+
+const useUsers = () : {
+	users: User[],
+	setUsers: React.Dispatch<React.SetStateAction<User[]>>
+} => {
 	const [users, setUsers] = useState<User[]>([]);
 
 	useEffect(() => {
@@ -36,7 +40,7 @@ const useUsers = () => {
 					following,
 					created_at
 				});
-			};
+			}
 
 			setUsers(newState);
 		});

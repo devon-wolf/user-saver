@@ -1,7 +1,7 @@
-import { GHUser } from '../types';
+import { User, GHUser } from '../types';
 import { convertDate } from './convertDate';
 
-export const shapeUserData = (user : GHUser) => {
+export const shapeUserData = (user : GHUser) : User => {
 	return {
 		id: user.id,
 		url: user.html_url,
