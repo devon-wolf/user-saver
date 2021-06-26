@@ -14,7 +14,7 @@ describe('UserSaver page', () => {
   });
 
   it('displays a list of users and their data', async () => {
-    const tableRows = await screen.findAllByLabelText('table row');
+    const tableRows = await screen.findAllByLabelText('user row');
     expect(tableRows.length).toBeGreaterThan(0);
     
     tableRows.forEach(row => {
