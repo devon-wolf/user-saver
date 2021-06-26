@@ -56,53 +56,6 @@ exports[`UserSaver page displays a list of users and their data 2`] = `
   >
     <a
       aria-label="link to GitHub"
-      href="https://github.com/Tylerfarris"
-    >
-      Tylerfarris
-    </a>
-  </td>
-  <td
-    aria-label="name"
-  >
-    n/a
-  </td>
-  <td
-    aria-label="public repos"
-  >
-    0
-  </td>
-  <td
-    aria-label="public gists"
-  >
-    0
-  </td>
-  <td
-    aria-label="followers"
-  >
-    0
-  </td>
-  <td
-    aria-label="following"
-  >
-    0
-  </td>
-  <td
-    aria-label="created at"
-  >
-    04/07/2020
-  </td>
-</tr>
-`;
-
-exports[`UserSaver page displays a list of users and their data 3`] = `
-<tr
-  aria-label="user row"
->
-  <td
-    aria-label="username"
-  >
-    <a
-      aria-label="link to GitHub"
       href="https://github.com/Vance-M"
     >
       Vance-M
@@ -141,7 +94,7 @@ exports[`UserSaver page displays a list of users and their data 3`] = `
 </tr>
 `;
 
-exports[`UserSaver page displays a list of users and their data 4`] = `
+exports[`UserSaver page displays a list of users and their data 3`] = `
 <tr
   aria-label="user row"
 >
@@ -188,7 +141,7 @@ exports[`UserSaver page displays a list of users and their data 4`] = `
 </tr>
 `;
 
-exports[`UserSaver page displays a list of users and their data 5`] = `
+exports[`UserSaver page displays a list of users and their data 4`] = `
 <tr
   aria-label="user row"
 >
@@ -231,6 +184,53 @@ exports[`UserSaver page displays a list of users and their data 5`] = `
     aria-label="created at"
   >
     10/20/2020
+  </td>
+</tr>
+`;
+
+exports[`UserSaver page displays a list of users and their data 5`] = `
+<tr
+  aria-label="user row"
+>
+  <td
+    aria-label="username"
+  >
+    <a
+      aria-label="link to GitHub"
+      href="https://github.com/Tylerpfarris"
+    >
+      Tylerpfarris
+    </a>
+  </td>
+  <td
+    aria-label="name"
+  >
+    Tyler Farris
+  </td>
+  <td
+    aria-label="public repos"
+  >
+    61
+  </td>
+  <td
+    aria-label="public gists"
+  >
+    0
+  </td>
+  <td
+    aria-label="followers"
+  >
+    13
+  </td>
+  <td
+    aria-label="following"
+  >
+    8
+  </td>
+  <td
+    aria-label="created at"
+  >
+    12/13/2020
   </td>
 </tr>
 `;

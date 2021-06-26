@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { User } from '../types';
 import { usersRef } from '../services/firebaseUtils';
 
+// TODO figure out if it should make a fresh GH fetch each time the display is populated, this data can get stale fast as-is; consider just storing a list of usernames and making fetches regularly?
 const useUsers = () => {
 	const [users, setUsers] = useState<User[]>([]);
 
@@ -10,6 +11,7 @@ const useUsers = () => {
 			const snapshotUsers = snapshot.val();
 			const newState = [];
 			
+			// TODO determine if this looping is as inefficient as I suspect it is
 			for (const user in snapshotUsers) {
 				const {
 					id,
