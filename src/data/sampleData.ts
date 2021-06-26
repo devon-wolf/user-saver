@@ -1,4 +1,3 @@
-
 export const gitHubUser = {
 	"login": "devon-wolf",
 	"id": 33987744,

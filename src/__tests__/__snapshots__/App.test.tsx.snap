@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserSaver page displays a list of users and their data 1`] = `
+<tr
+  aria-label="table row"
+>
+  <td>
+    <a
+      href="https://github.com/devon-wolf"
+    >
+      devon-wolf
+    </a>
+  </td>
+  <td>
+    <span>
+      n/a
+    </span>
+  </td>
+  <td>
+    <span>
+      80
+    </span>
+  </td>
+  <td>
+    <span>
+      0
+    </span>
+  </td>
+  <td>
+    <span>
+      30
+    </span>
+  </td>
+  <td>
+    <span>
+      45
+    </span>
+  </td>
+  <td>
+    <span>
+      11/25/2017
+    </span>
+  </td>
+</tr>
+`;
+
+exports[`UserSaver page displays a list of users and their data 2`] = `
+<tr
+  aria-label="table row"
+>
+  <td>
+    <a
+      href="https://github.com/Tylerfarris"
+    >
+      Tylerfarris
+    </a>
+  </td>
+  <td>
+    <span>
+      n/a
+    </span>
+  </td>
+  <td>
+    <span>
+      0
+    </span>
+  </td>
+  <td>
+    <span>
+      0
+    </span>
+  </td>
+  <td>
+    <span>
+      0
+    </span>
+  </td>
+  <td>
+    <span>
+      0
+    </span>
+  </td>
+  <td>
+    <span>
+      04/07/2020
+    </span>
+  </td>
+</tr>
+`;
+
+exports[`UserSaver page displays a list of users and their data 3`] = `
+<tr
+  aria-label="table row"
+>
+  <td>
+    <a
+      href="https://github.com/Vance-M"
+    >
+      Vance-M
+    </a>
+  </td>
+  <td>
+    <span>
+      n/a
+    </span>
+  </td>
+  <td>
+    <span>
+      55
+    </span>
+  </td>
+  <td>
+    <span>
+      0
+    </span>
+  </td>
+  <td>
+    <span>
+      14
+    </span>
+  </td>
+  <td>
+    <span>
+      2
+    </span>
+  </td>
+  <td>
+    <span>
+      11/19/2020
+    </span>
+  </td>
+</tr>
+`;
+
+exports[`UserSaver page displays a list of users and their data 4`] = `
+<tr
+  aria-label="table row"
+>
+  <td>
+    <a
+      href="https://github.com/ccbass"
+    >
+      ccbass
+    </a>
+  </td>
+  <td>
+    <span>
+      Colin Bassett
+    </span>
+  </td>
+  <td>
+    <span>
+      31
+    </span>
+  </td>
+  <td>
+    <span>
+      0
+    </span>
+  </td>
+  <td>
+    <span>
+      9
+    </span>
+  </td>
+  <td>
+    <span>
+      0
+    </span>
+  </td>
+  <td>
+    <span>
+      05/20/2020
+    </span>
+  </td>
+</tr>
+`;
+
+exports[`UserSaver page displays a list of users and their data 5`] = `
+<tr
+  aria-label="table row"
+>
+  <td>
+    <a
+      href="https://github.com/phrabos"
+    >
+      phrabos
+    </a>
+  </td>
+  <td>
+    <span>
+      Patrick Hrabos
+    </span>
+  </td>
+  <td>
+    <span>
+      92
+    </span>
+  </td>
+  <td>
+    <span>
+      0
+    </span>
+  </td>
+  <td>
+    <span>
+      28
+    </span>
+  </td>
+  <td>
+    <span>
+      39
+    </span>
+  </td>
+  <td>
+    <span>
+      10/20/2020
+    </span>
+  </td>
+</tr>
+`;
