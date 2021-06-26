@@ -19,26 +19,28 @@ const UserItem = ({ user } : UserProps) => {
 
 	return (
 		<>
-			<td>
-				<a href={url}>{login}</a>
+			<td aria-label="username">
+				<a aria-label="link to GitHub" href={url}>
+					{login}
+				</a>
 			</td>
-			<td>
-				<span>{name ? name : 'n/a'}</span>
+			<td aria-label="name">
+				{name ? name : 'n/a'}
 			</td>
-			<td>
-				<span>{public_repos}</span>
+			<td aria-label="public repos">
+				{public_repos}
 			</td>
-			<td>
-				<span>{public_gists}</span>
+			<td aria-label="public gists">
+				{public_gists}
 			</td>
-			<td>
-				<span>{followers}</span>
+			<td aria-label="followers">
+				{followers}
 			</td>
-			<td>
-				<span>{following}</span>
+			<td aria-label="following">
+				{following}
 			</td>
-			<td>
-				<span>{created_at}</span>
+			<td aria-label="created at">
+				{created_at}
 			</td>
 		</>
 	);

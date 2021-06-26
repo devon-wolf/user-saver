@@ -14,6 +14,7 @@ const SearchForm = ({ setMessage } : SearchFormProps) => {
 		e.preventDefault();
 		const fetchedUser = await getGitHubUser(searchInput);
 
+		// TODO improve/clarify error handling between here and the fetch function
 		if (fetchedUser === 404) {
 			setMessage('That user was not found.');
 		}
@@ -32,6 +33,7 @@ const SearchForm = ({ setMessage } : SearchFormProps) => {
 			onSubmit={handleSearchSubmit}
 		>
 			<input
+				aria-label="search input"
 				value={searchInput}
 				onChange={e => setSearchInput(e.target.value)}
 			/>

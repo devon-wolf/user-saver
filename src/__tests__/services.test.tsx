@@ -2,6 +2,8 @@ import { convertDate } from '../services/convertDate';
 import { getGitHubUser } from '../services/getGitHubUser';
 import { gitHubUser } from '../data/sampleData';
 
+// implementation tests, included for sake of testing everything I could think of but I wouldn't likely include these in a primary set of tests
+
 it('takes a date string as formatted by the GitHub API and reformats it to MM/DD/YYYY', () => {
 	const exampleDate = '2017-11-25T18:38:54Z';
 

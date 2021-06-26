@@ -7,10 +7,10 @@ const useUsers = () => {
 
 	useEffect(() => {
 		usersRef.on('value', snapshot => {
-			let snapshotUsers = snapshot.val();
-			let newState = [];
+			const snapshotUsers = snapshot.val();
+			const newState = [];
 			
-			for (let user in snapshotUsers) {
+			for (const user in snapshotUsers) {
 				const {
 					id,
 					url,
@@ -33,7 +33,7 @@ const useUsers = () => {
 					followers,
 					following,
 					created_at
-				})
+				});
 			};
 
 			setUsers(newState);

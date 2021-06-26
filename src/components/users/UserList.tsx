@@ -11,7 +11,7 @@ const UserList = ({ users } : UserListProps) => {
 
 	return (
 		<table>
-			<thead aria-label="table heading">
+			<thead>
 				<tr>
 					<th>Username</th>
 					<th>Name</th>
@@ -23,9 +23,9 @@ const UserList = ({ users } : UserListProps) => {
 				</tr>
 			</thead>
 
-			<tbody aria-label="table rows">
+			<tbody>
 				{users.map(user => 
-				<tr aria-label="table row" key={user.id}>
+				<tr aria-label="user row" key={user.id}>
 					<UserItem user={user} />
 				</tr>)}
 			</tbody>
