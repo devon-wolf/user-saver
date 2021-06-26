@@ -1,7 +1,6 @@
 import React from 'react';
-import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import UserSaver from './pages/UserSaver';
-import { act } from 'react-dom/test-utils';
+import { render, screen, fireEvent } from '@testing-library/react';
+import UserSaver from '../pages/UserSaver';
 
 describe('UserSaver page', () => {
   beforeEach(() => {
