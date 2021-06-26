@@ -1,5 +1,6 @@
 import React from 'react';
 import { User } from '../../types';
+import { convertDate } from '../../services/convertDate';
 
 type UserProps = {
 	user : User
@@ -38,7 +39,7 @@ const UserItem = ({ user } : UserProps) => {
 				<span>{following}</span>
 			</td>
 			<td>
-				<span>{created_at}</span>
+				<span>{convertDate(created_at)}</span>
 			</td>
 		</>
 	);
