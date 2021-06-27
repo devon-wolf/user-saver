@@ -5,7 +5,7 @@ type UserProps = {
 	user : User
 };
 
-const UserItem = ({ user } : UserProps) => {
+const UserItem = ({ user } : UserProps) : JSX.Element => {
 	const {
 		url,
 		login,

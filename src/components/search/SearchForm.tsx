@@ -4,10 +4,10 @@ import { usersRef } from '../../services/firebaseUtils';
 import { shapeUserData } from '../../services/mungeUtils';
 
 type SearchFormProps = {
-	setMessage : Function
+	setMessage: React.Dispatch<React.SetStateAction<string>> 
 };
 
-const SearchForm = ({ setMessage } : SearchFormProps) => {
+const SearchForm = ({ setMessage } : SearchFormProps) : JSX.Element => {
 	const [searchInput, setSearchInput] = useState('');
 
 	const handleSearchSubmit = async (e : FormEvent) => {

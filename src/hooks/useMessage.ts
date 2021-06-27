@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
-const useMessage = () => {
+const useMessage = () : {
+    message: string;
+    setMessage: React.Dispatch<React.SetStateAction<string>>;
+} => {
 	const [message, setMessage] = useState('');
 
 	return {

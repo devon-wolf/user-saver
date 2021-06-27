@@ -7,7 +7,7 @@ type UserListProps = {
 	users : User[]
 };
 
-const UserList = ({ users } : UserListProps) => {
+const UserList = ({ users } : UserListProps) : JSX.Element => {
 
 	return (
 		<table>
@@ -25,9 +25,9 @@ const UserList = ({ users } : UserListProps) => {
 
 			<tbody>
 				{users.map(user => 
-				<tr aria-label="user row" key={user.id}>
-					<UserItem user={user} />
-				</tr>)}
+					<tr aria-label="user row" key={user.id}>
+						<UserItem user={user} />
+					</tr>)}
 			</tbody>
 		</table>
 	);
