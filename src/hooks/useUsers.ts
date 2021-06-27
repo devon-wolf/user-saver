@@ -6,7 +6,6 @@ import { useFirebaseUsers } from './useFirebase';
 
 const useUsers = () : {
 	users: User[],
-	setUsers: React.Dispatch<React.SetStateAction<User[]>>
 } => {
 	const [users, setUsers] = useState<User[]>([]);
 	const { values } = useFirebaseUsers();
@@ -16,8 +15,7 @@ const useUsers = () : {
 	}, [values]);
 
 	return {
-		users,
-		setUsers
+		users
 	};
 };
 
