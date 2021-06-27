@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 import { getGitHubUser } from '../../services/getGitHubUser';
-import { usersRef } from '../../services/firebaseUtils';
+import { usersRef } from '../../hooks/useFirebase';
 import { shapeUserData } from '../../services/mungeUtils';
 
 type SearchFormProps = {
