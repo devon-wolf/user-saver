@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
 import { useListVals } from 'react-firebase-hooks/database';
+import { User } from '../types';
 
 const firebaseConfig = {
 	apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -16,11 +17,11 @@ firebase.initializeApp(firebaseConfig);
 
 export const usersRef = firebase.database().ref('users');
 
-export const useFirebase = () : {
-    values: any[] | undefined;
+export const useFirebaseUsers = () : {
+    values: User[] | undefined;
     loading: boolean;
     error: firebase.FirebaseError | undefined;
 } => {
-	const [values, loading, error] = useListVals(usersRef);
+	const [values, loading, error] = useListVals<User>(usersRef);
 	return { values, loading, error };
 };
