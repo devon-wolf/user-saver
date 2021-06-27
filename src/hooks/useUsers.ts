@@ -4,9 +4,7 @@ import { useFirebaseUsers } from './useFirebase';
 
 // TODO consider that the GH data gets stale, maybe add a time stamp or a fresh fetch option
 
-const useUsers = () : {
-	users: User[],
-} => {
+const useUsers = () : { users: User[] } => {
 	const [users, setUsers] = useState<User[]>([]);
 	const { values } = useFirebaseUsers();
 	
@@ -14,9 +12,7 @@ const useUsers = () : {
 		values ? setUsers(values) : setUsers([]);
 	}, [values]);
 
-	return {
-		users
-	};
+	return { users };
 };
 
 export default useUsers;
