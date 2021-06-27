@@ -1,21 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { User } from '../types';
-import { useFirebase } from './useFirebase';
+import { useFirebaseUsers } from './useFirebase';
 
-// TODO figure out if it should make a fresh GH fetch each time the display is populated, this data can get stale fast as-is; consider just storing a list of usernames and making fetches regularly?
+// TODO consider that the GH data gets stale, maybe add a time stamp or a fresh fetch option
 
 const useUsers = () : {
 	users: User[],
-	setUsers: React.Dispatch<React.SetStateAction<User[]>>
 } => {
-	
 	const [users, setUsers] = useState<User[]>([]);
-
-	useFirebase({ setUsers });
+	const { values } = useFirebaseUsers();
+	
+	useEffect(() => {
+		values ? setUsers(values) : setUsers([]);
+	}, [values]);
 
 	return {
-		users,
-		setUsers
+		users
 	};
 };
 

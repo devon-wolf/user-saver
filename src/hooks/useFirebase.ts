@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
-import { useEffect } from 'react';
+import { useListVals } from 'react-firebase-hooks/database';
 import { User } from '../types';
 
 const firebaseConfig = {
@@ -17,54 +17,11 @@ firebase.initializeApp(firebaseConfig);
 
 export const usersRef = firebase.database().ref('users');
 
-type UseFirebaseProps = {
-	setUsers: React.Dispatch<React.SetStateAction<User[]>>
+export const useFirebaseUsers = () : {
+    values: User[] | undefined;
+    loading: boolean;
+    error: firebase.FirebaseError | undefined;
+} => {
+	const [values, loading, error] = useListVals<User>(usersRef);
+	return { values, loading, error };
 };
-
-export const useFirebase = ({ setUsers } : UseFirebaseProps) : void => {
-	const updateUsers = (snapshot : firebase.database.DataSnapshot) : void => {
-		const snapshotUsers = snapshot.val();
-		const newUsers = [];
-		
-		// TODO determine if this looping is as inefficient as I suspect it is
-		for (const user in snapshotUsers) {
-			const {
-				id,
-				url,
-				login,
-				name,
-				public_repos,
-				public_gists,
-				followers,
-				following,
-				created_at
-			} = snapshotUsers[user];
-	
-			newUsers.push({
-				id,
-				url,
-				login,
-				name,
-				public_repos,
-				public_gists,
-				followers,
-				following,
-				created_at
-			});
-		}
-	
-		setUsers(newUsers);
-	};
-
-	useEffect(() => {
-		let isMounted = true;
-
-		if (isMounted) usersRef.on('value', updateUsers);
-	
-		return () => {
-			isMounted = false;
-			usersRef.off('value', updateUsers);
-		};
-	}, []);
-};
-

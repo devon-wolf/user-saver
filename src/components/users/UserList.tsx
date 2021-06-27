@@ -1,13 +1,9 @@
 import React from 'react';
 import UserItem from './UserItem';
-import { User } from '../../types';
+import useUsers from '../../hooks/useUsers';
 
-
-type UserListProps = {
-	users : User[]
-};
-
-const UserList = ({ users } : UserListProps) : JSX.Element => {
+const UserList = () : JSX.Element => {
+	const { users } = useUsers();
 
 	return (
 		<table>
