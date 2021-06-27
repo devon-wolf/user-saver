@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { User } from '../types';
 
 const firebaseConfig = {
@@ -22,7 +22,6 @@ type UseFirebaseProps = {
 };
 
 export const useFirebase = ({ setUsers } : UseFirebaseProps) : void => {
-	const [mounted, setMounted] = useState(true);
 	const updateUsers = (snapshot : firebase.database.DataSnapshot) : void => {
 		const snapshotUsers = snapshot.val();
 		const newUsers = [];
@@ -54,15 +53,17 @@ export const useFirebase = ({ setUsers } : UseFirebaseProps) : void => {
 			});
 		}
 	
-		if (mounted) setUsers(newUsers);
+		setUsers(newUsers);
 	};
 
 	useEffect(() => {
-		usersRef.on('value', updateUsers);
+		let isMounted = true;
+
+		if (isMounted) usersRef.on('value', updateUsers);
 	
 		return () => {
+			isMounted = false;
 			usersRef.off('value', updateUsers);
-			setMounted(false);
 		};
 	}, []);
 };

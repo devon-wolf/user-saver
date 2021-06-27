@@ -56,20 +56,20 @@ exports[`UserSaver page displays a list of users and their data 2`] = `
   >
     <a
       aria-label="link to GitHub"
-      href="https://github.com/Vance-M"
+      href="https://github.com/caseywar"
     >
-      Vance-M
+      caseywar
     </a>
   </td>
   <td
     aria-label="name"
   >
-    n/a
+    Casey Warren
   </td>
   <td
     aria-label="public repos"
   >
-    55
+    58
   </td>
   <td
     aria-label="public gists"
@@ -79,252 +79,17 @@ exports[`UserSaver page displays a list of users and their data 2`] = `
   <td
     aria-label="followers"
   >
-    14
+    23
   </td>
   <td
     aria-label="following"
   >
-    2
+    35
   </td>
   <td
     aria-label="created at"
   >
-    11/19/2020
-  </td>
-</tr>
-`;
-
-exports[`UserSaver page displays a list of users and their data 3`] = `
-<tr
-  aria-label="user row"
->
-  <td
-    aria-label="username"
-  >
-    <a
-      aria-label="link to GitHub"
-      href="https://github.com/ccbass"
-    >
-      ccbass
-    </a>
-  </td>
-  <td
-    aria-label="name"
-  >
-    Colin Bassett
-  </td>
-  <td
-    aria-label="public repos"
-  >
-    31
-  </td>
-  <td
-    aria-label="public gists"
-  >
-    0
-  </td>
-  <td
-    aria-label="followers"
-  >
-    9
-  </td>
-  <td
-    aria-label="following"
-  >
-    0
-  </td>
-  <td
-    aria-label="created at"
-  >
-    05/20/2020
-  </td>
-</tr>
-`;
-
-exports[`UserSaver page displays a list of users and their data 4`] = `
-<tr
-  aria-label="user row"
->
-  <td
-    aria-label="username"
-  >
-    <a
-      aria-label="link to GitHub"
-      href="https://github.com/phrabos"
-    >
-      phrabos
-    </a>
-  </td>
-  <td
-    aria-label="name"
-  >
-    Patrick Hrabos
-  </td>
-  <td
-    aria-label="public repos"
-  >
-    92
-  </td>
-  <td
-    aria-label="public gists"
-  >
-    0
-  </td>
-  <td
-    aria-label="followers"
-  >
-    28
-  </td>
-  <td
-    aria-label="following"
-  >
-    39
-  </td>
-  <td
-    aria-label="created at"
-  >
-    10/20/2020
-  </td>
-</tr>
-`;
-
-exports[`UserSaver page displays a list of users and their data 5`] = `
-<tr
-  aria-label="user row"
->
-  <td
-    aria-label="username"
-  >
-    <a
-      aria-label="link to GitHub"
-      href="https://github.com/Tylerpfarris"
-    >
-      Tylerpfarris
-    </a>
-  </td>
-  <td
-    aria-label="name"
-  >
-    Tyler Farris
-  </td>
-  <td
-    aria-label="public repos"
-  >
-    61
-  </td>
-  <td
-    aria-label="public gists"
-  >
-    0
-  </td>
-  <td
-    aria-label="followers"
-  >
-    13
-  </td>
-  <td
-    aria-label="following"
-  >
-    8
-  </td>
-  <td
-    aria-label="created at"
-  >
-    12/13/2020
-  </td>
-</tr>
-`;
-
-exports[`UserSaver page displays a list of users and their data 6`] = `
-<tr
-  aria-label="user row"
->
-  <td
-    aria-label="username"
-  >
-    <a
-      aria-label="link to GitHub"
-      href="https://github.com/dpcairns"
-    >
-      dpcairns
-    </a>
-  </td>
-  <td
-    aria-label="name"
-  >
-    Danny Cairns
-  </td>
-  <td
-    aria-label="public repos"
-  >
-    401
-  </td>
-  <td
-    aria-label="public gists"
-  >
-    0
-  </td>
-  <td
-    aria-label="followers"
-  >
-    75
-  </td>
-  <td
-    aria-label="following"
-  >
-    2
-  </td>
-  <td
-    aria-label="created at"
-  >
-    12/05/2015
-  </td>
-</tr>
-`;
-
-exports[`UserSaver page displays a list of users and their data 7`] = `
-<tr
-  aria-label="user row"
->
-  <td
-    aria-label="username"
-  >
-    <a
-      aria-label="link to GitHub"
-      href="https://github.com/mehtaphysical"
-    >
-      mehtaphysical
-    </a>
-  </td>
-  <td
-    aria-label="name"
-  >
-    Ryan Mehta
-  </td>
-  <td
-    aria-label="public repos"
-  >
-    57
-  </td>
-  <td
-    aria-label="public gists"
-  >
-    12
-  </td>
-  <td
-    aria-label="followers"
-  >
-    97
-  </td>
-  <td
-    aria-label="following"
-  >
-    0
-  </td>
-  <td
-    aria-label="created at"
-  >
-    12/09/2011
+    11/24/2020
   </td>
 </tr>
 `;
