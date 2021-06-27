@@ -2,6 +2,7 @@ import React, { FormEvent, useState } from 'react';
 import { getGitHubUser } from '../../services/getGitHubUser';
 import { usersRef } from '../../hooks/useFirebase';
 import { shapeUserData } from '../../services/mungeUtils';
+import './SearchForm.css';
 
 type SearchFormProps = {
 	setMessage: React.Dispatch<React.SetStateAction<string>> 
@@ -32,6 +33,7 @@ const SearchForm = ({ setMessage } : SearchFormProps) : JSX.Element => {
 	return (
 		<form
 			aria-label="search form"
+			className="searchForm"
 			onSubmit={handleSearchSubmit}
 		>
 			<input

@@ -1,4 +1,5 @@
 import React from 'react';
+import './FeedbackMessage.css';
 
 type FeedbackMessageProps = {
 	message : string
@@ -6,7 +7,7 @@ type FeedbackMessageProps = {
 
 const FeedbackMessage = ({ message } : FeedbackMessageProps) : JSX.Element => {
 	return (
-		<div>
+		<div className="feedbackMessage">
 			{message}
 		</div>
 	);

@@ -1,0 +1,21 @@
+.userList {
+	margin: 1rem 0;
+	background-color: white;
+	border-radius: 2px;
+}
+
+.userList thead th {
+	background-color: dimgray;
+	color: white;
+	padding: .5rem;
+	border-radius: 2px;
+}
+
+.userList td {
+	border-bottom: dotted 1px dimgray;
+}
+
+.userList tr:hover {
+	background-color: powderblue;
+}
+
