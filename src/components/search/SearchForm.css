@@ -1,3 +1,7 @@
 .searchForm {
 	margin: 1rem 0;
+	background-color: lightsteelblue;
+	padding: 1rem;
+	border: solid 2px dimgray;
+	border-radius: 2px;
 }
