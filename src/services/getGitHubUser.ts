@@ -1,10 +1,8 @@
 import fetch from 'node-fetch';
 import { GHUser } from '../types';
 
-const URL = 'https://api.github.com/users';
-
 export const getGitHubUser  = (user : string) : Promise<GHUser | number> => {
-	return fetch(`${URL}/${user}`)
+	return fetch(`https://api.github.com/users/${user}`)
 		.then(response =>
 			response.ok
 				? response.json()
