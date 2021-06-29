@@ -66,23 +66,17 @@ describe('UserSaver page', () => {
 	// TODO mock needs to be improved to get the new user to render on the screen, currently just gets pushed into the array of users but doesn't trigger an update
 	it('takes in a search term and correctly updates with results on submit', () => {
 		const searchInput = screen.getByRole('textbox');
-
 		const feedbackMessage = screen.getByLabelText('feedback message');
-		expect(feedbackMessage).toHaveTextContent('');
 
 		userEvent.type(searchInput, 'dpcairns');
-		expect(searchInput).toHaveValue('dpcairns');
-
-		expect(userValues.length).toEqual(2);
-
 		userEvent.type(searchInput, '{enter}');
 		
 		return waitFor(() => {
-			expect(searchInput).toHaveValue('');
 			expect(feedbackMessage).toHaveTextContent('Success!');
 
 			// TODO remove when screen is working
 			expect(userValues.length).toEqual(3);
+			expect(userValues[2].name).toEqual('Danny Cairns');
 		});
 	});
 });

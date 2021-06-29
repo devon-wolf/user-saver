@@ -13,13 +13,13 @@ const SearchForm = ({ setMessage } : SearchFormProps) : JSX.Element => {
 
 	const handleSearchSubmit = async (e : FormEvent) => {
 		e.preventDefault();
+		
 		const fetchedUser = await getGitHubUser(searchInput);
 
-		// TODO improve/clarify error handling between here and the fetch function
 		if (typeof fetchedUser === 'number') {
 			if (fetchedUser === 404)
 				setMessage('That user was not found.');
-			else setMessage(`Something went wrong. (${fetchedUser})`);
+			else setMessage(`Something went wrong. (Status: ${fetchedUser})`);
 		}
 		else {
 			setMessage('Success!');
