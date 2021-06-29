@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 import { getGitHubUser } from '../../services/getGitHubUser';
-import { usersRef } from '../../services/firebaseConfig';
+import usersRef from '../../services/firebaseConfig';
 import { shapeUserData } from '../../services/mungeUtils';
 import './SearchForm.css';
 
@@ -13,6 +13,7 @@ const SearchForm = ({ setMessage } : SearchFormProps) : JSX.Element => {
 
 	const handleSearchSubmit = async (e : FormEvent) => {
 		e.preventDefault();
+		console.log('**** FORM SUBMITTED ****');
 		const fetchedUser = await getGitHubUser(searchInput);
 
 		// TODO improve/clarify error handling between here and the fetch function
@@ -25,6 +26,7 @@ const SearchForm = ({ setMessage } : SearchFormProps) : JSX.Element => {
 			setMessage('Success!');
 			const shapedUser = shapeUserData(fetchedUser);
 			usersRef.push(shapedUser);
+			console.log('**** pushed to firebase ****');
 		}
 
 		setSearchInput('');

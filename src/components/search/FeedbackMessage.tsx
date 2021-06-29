@@ -7,7 +7,9 @@ type FeedbackMessageProps = {
 
 const FeedbackMessage = ({ message } : FeedbackMessageProps) : JSX.Element => {
 	return (
-		<div className="feedbackMessage">
+		<div
+			aria-label="feedback message"
+			className="feedbackMessage">
 			{message}
 		</div>
 	);
