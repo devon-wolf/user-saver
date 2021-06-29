@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 import { getGitHubUser } from '../../services/getGitHubUser';
-import { usersRef } from '../../services/firebaseConfig';
+import usersRef from '../../services/firebaseConfig';
 import { shapeUserData } from '../../services/mungeUtils';
 import './SearchForm.css';
 
